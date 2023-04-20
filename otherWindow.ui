@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OtherWindow</class>
+ <widget class="QMainWindow" name="OtherWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>434</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(64, 74, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+color:black;
+border: 4px solid rgb(170, 0, 0) ;
+border-color: 13;}
+
+QPushButton:hover{
+	background-color: rgb(85, 255, 255);}
+QPushButton:pressed{
+	background-color: rgb(85, 85, 127);}
+</string>
+    </property>
+    <property name="text">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>230</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+color:black;
+border: 4px solid rgb(170, 0, 0) ;
+border-color: 13;}
+
+QPushButton:hover{
+	background-color: rgb(85, 255, 255);}
+QPushButton:pressed{
+	background-color: rgb(85, 85, 127);}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>340</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+color:black;
+border: 4px solid rgb(170, 0, 0) ;
+border-color: 13;}
+
+QPushButton:hover{
+	background-color: rgb(85, 255, 255);}
+QPushButton:pressed{
+	background-color: rgb(85, 85, 127);}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>401</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;GenaBooking&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

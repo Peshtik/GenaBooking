@@ -1,6 +1,7 @@
 import sqlite3
 from PyQt5 import QtWidgets
-import mydesign
+import mainWindow
+from GenaBooking import perehod
 
 db = sqlite3.connect('database.db')
 cursor = db.cursor()
@@ -15,7 +16,7 @@ for i in cursor.execute('SELECT * FROM users'):
     print(i)
 
 
-class Registration(QtWidgets.QMainWindow, mydesign.Ui_MainWindow):
+class Registration(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
     def __init__(self):
         super(Registration, self).__init__()
         self.setupUi(self)
@@ -54,12 +55,12 @@ class Registration(QtWidgets.QMainWindow, mydesign.Ui_MainWindow):
             self.label_3.setText('Такой аккаунт уже имеется!')
 
 
-class Login(QtWidgets.QMainWindow, mydesign.Ui_MainWindow):
+class Login(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
     def __init__(self):
         super(Login, self).__init__()
         self.setupUi(self)
         self.label_3.setText('')
-        self.label_2.setText('Логин')
+        self.label_2.setText('Вход в аккаунт')
         self.lineEdit.setPlaceholderText('Введите логин')
         self.lineEdit_2.setPlaceholderText('Введите пароль')
         self.pushButton.setText('Вход')
@@ -91,9 +92,24 @@ class Login(QtWidgets.QMainWindow, mydesign.Ui_MainWindow):
         check_login = cursor.fetchall()
 
         if check_pass[0][0] == user_password and check_login[0][0] == user_login:
-            self.label_3.setText('Успешная авторизация!')
+            self.openWindow()
+            # self.label_3.setText('Успешная авторизация!')
+
+
         else:
-            self.label_3.setText('Ошибка авторизации...')
+            self.label_3.setText('Неправельный логин или пароль...')
+
+
+class Perehod(QtWidgets.QWidget, perehod.Ui_Form):
+    def __init__(self):
+        super(Perehod, self).__init__()
+        self.pushButton.setText('Записаться')
+        self.pushButton_2.setText('Мои Записи')
+        self.pushButton_3.setText('Exit')
+        self.setWindowTitle('GenaBooking')
+
+
+
 
 
 App = QtWidgets.QApplication([])
