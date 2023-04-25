@@ -1,7 +1,7 @@
 import sqlite3
 from PyQt5 import QtWidgets
 import mainWindow
-from GenaBooking import perehod
+
 
 db = sqlite3.connect('database.db')
 cursor = db.cursor()
@@ -100,13 +100,6 @@ class Login(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
             self.label_3.setText('Неправельный логин или пароль...')
 
 
-class Perehod(QtWidgets.QWidget, perehod.Ui_Form):
-    def __init__(self):
-        super(Perehod, self).__init__()
-        self.pushButton.setText('Записаться')
-        self.pushButton_2.setText('Мои Записи')
-        self.pushButton_3.setText('Exit')
-        self.setWindowTitle('GenaBooking')
 
 
 
