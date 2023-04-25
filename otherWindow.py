@@ -93,6 +93,26 @@ class Ui_OtherWindow(object):
         self.pushButton_2.setText(_translate("OtherWindow", "Выход"))
         self.label.setText(_translate("OtherWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">GenaBooking<br/></span></p></body></html>"))
         self.pushButton_3.setText(_translate("OtherWindow", "Мои Записи"))
+    
+    
+     def getinfo(self):
+        # dat = self.dateTimeEdit.date()
+        # ti = self.dateTimeEdit.time()
+        al = self.dateTimeEdit.dateTime()
+        self.insert(al)
+
+    def insert(self, x):
+        db = sqlite3.connect('database.db')
+        cursor = db.cursor()
+
+        cursor.execute('''CREATE TABLE IF NOT EXISTS users(
+                    ID INTEGER PRIMARY KEY,
+                    login TEXT, 
+                    password TEXT,
+                    data TEXT
+                )''')
+        db.commit()
+        cursor.execute('''INSERT INTO database (data) VALUES (x)''')
 
 
 if __name__ == "__main__":
