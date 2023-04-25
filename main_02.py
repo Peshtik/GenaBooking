@@ -1,13 +1,18 @@
 import sqlite3
 from PyQt5 import QtWidgets
 import mainWindow
+import otherWindow
+import time
 
+# from pyqt.ui
+from PyQt5.QtWidgets import QDialog, QApplication
 
 db = sqlite3.connect('database.db')
 cursor = db.cursor()
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS users(
-    login TEXT,
+    ID INTEGER PRIMARY KEY,
+    login TEXT, 
     password TEXT
 )''')
 db.commit()
@@ -91,13 +96,24 @@ class Login(QtWidgets.QMainWindow, mainWindow.Ui_MainWindow):
         cursor.execute(f'SELECT login FROM users WHERE login="{user_login}"')
         check_login = cursor.fetchall()
 
-        if check_pass[0][0] == user_password and check_login[0][0] == user_login:
-            self.openWindow()
+        if check_pass[0][0] == user_password:
+            if check_login[0][0] == user_login:
+                self.openWindow()
+                # self.pushButton.clicked.connect(self.zapisi)
+
+
             # self.label_3.setText('Успешная авторизация!')
+            else:
+                self.label_3.setText('Неправельный логин или пароль...')
+
+        elif check_pass[0][0] != user_password:
+            self.label_3.setText('Неправельный логин или пароль...')
+
 
 
         else:
             self.label_3.setText('Неправельный логин или пароль...')
+
 
 
 

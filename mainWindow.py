@@ -9,6 +9,8 @@ class Ui_MainWindow(object):
         self.ui = Ui_OtherWindow()
         self.ui.setupUi(self.window)
         self.window.show()
+        self.hide()
+
 
 
 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Выбор</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(64, 74, 255);</string>
@@ -26,31 +26,12 @@
       <height>101</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-background-color: rgb(255, 255, 255);
-color:black;
-border: 4px solid rgb(170, 0, 0) ;
-border-color: 13;}
-
-QPushButton:hover{
-	background-color: rgb(85, 255, 255);}
-QPushButton:pressed{
-	background-color: rgb(85, 85, 127);}
-</string>
-    </property>
-    <property name="text">
-     <string notr="true"/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>230</y>
-      <width>291</width>
-      <height>101</height>
-     </rect>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
@@ -66,7 +47,7 @@ QPushButton:pressed{
 </string>
     </property>
     <property name="text">
-     <string/>
+     <string notr="true">Записаться</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -78,6 +59,13 @@ QPushButton:pressed{
       <height>101</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton{
 background-color: rgb(255, 255, 255);
@@ -92,7 +80,7 @@ QPushButton:pressed{
 </string>
     </property>
     <property name="text">
-     <string/>
+     <string>Выход</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -109,6 +97,39 @@ QPushButton:pressed{
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;GenaBooking&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>230</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+color:black;
+border: 4px solid rgb(170, 0, 0) ;
+border-color: 13;}
+
+QPushButton:hover{
+	background-color: rgb(85, 255, 255);}
+QPushButton:pressed{
+	background-color: rgb(85, 85, 127);}
+</string>
+    </property>
+    <property name="text">
+     <string>Мои Записи</string>
     </property>
    </widget>
   </widget>
