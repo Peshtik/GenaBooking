@@ -13,7 +13,7 @@ class Ui_OtherWindow(object):
         self.window.show()
         # self.hide()
 
-    def me(self):
+    def me(self):pass
         # self.w = QtWidgets.QMainWindow()
         # self.ui = Me()
         # self.ui.setupUi(self.w)
