@@ -1,6 +1,20 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sqlite3
+from PyQt5 import QtWidgets
+
 
 class Ui_MainWindow(object):
+
+    ab = sqlite3.connect('dates.db')
+    cursor = ab.cursor()
+
+    table = ('''CREATE TABLE  dates(
+               data TEXT
+           )''')
+    ab.commit()
+
+
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(742, 475)
@@ -45,8 +59,8 @@ class Ui_MainWindow(object):
 "")
         self.dateTimeEdit.setDate(QtCore.QDate.currentDate())
         self.dateTimeEdit.setTime(QtCore.QTime.currentTime())
-        self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2023, 5, 30), QtCore.QTime(23, 59, 59)))
-        self.dateTimeEdit.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(2023, 4, 25), QtCore.QTime(10, 0, 0)))
+        self.dateTimeEdit.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2023, 9, 30), QtCore.QTime(23, 59, 59)))
+        self.dateTimeEdit.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate.currentDate(), QtCore.QTime(10, 0, 0)))
         self.dateTimeEdit.setCurrentSection(QtWidgets.QDateTimeEdit.HourSection)
         self.dateTimeEdit.setCurrentSectionIndex(3)
         self.dateTimeEdit.setTimeSpec(QtCore.Qt.TimeZone)
@@ -71,7 +85,24 @@ class Ui_MainWindow(object):
         self.insert(al)
 
     def insert(self, x):
-        cursor.execute('''INSERT INTO database (data) VALUES (x)''')
+        print(x)
+        # cursor.execute(table)
+        # cursor.execute(f'INSERT INTO dates VALUES ("{x}")')
+        # ab.commit()
+
+    # ab = sqlite3.connect('dates.db')
+    # cursor = ab.cursor()
+    #
+    # table = ('''CREATE TABLE IF NOT EXISTS dates(
+    #         data TEXT
+    #     )''')
+    # cursor.execute(table)
+    # cursor.execute(f'INSERT INTO dates VALUES ("{x}")')
+    # ab.commit()
+
+
+
+
 
 
 

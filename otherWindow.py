@@ -1,5 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from zap import Ui_MainWindow
+import me
+
 
 
 class Ui_OtherWindow(object):
@@ -10,6 +12,14 @@ class Ui_OtherWindow(object):
         self.ui.setupUi(self.window)
         self.window.show()
         # self.hide()
+
+    def me(self):
+        # self.w = QtWidgets.QMainWindow()
+        # self.ui = Me()
+        # self.ui.setupUi(self.w)
+        # self.w.show()
+        # self.hide()
+
 
 
     def setupUi(self, OtherWindow):
@@ -65,6 +75,7 @@ class Ui_OtherWindow(object):
         self.label.setObjectName("label")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(70, 230, 291, 101))
+        self.pushButton_3.pressed.connect(self.me)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
