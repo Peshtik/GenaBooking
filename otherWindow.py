@@ -1,7 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from zap import Ui_MainWindow
-import me
-
 
 
 class Ui_OtherWindow(object):
@@ -12,14 +10,6 @@ class Ui_OtherWindow(object):
         self.ui.setupUi(self.window)
         self.window.show()
         # self.hide()
-
-    def me(self):pass
-        # self.w = QtWidgets.QMainWindow()
-        # self.ui = Me()
-        # self.ui.setupUi(self.w)
-        # self.w.show()
-        # self.hide()
-
 
 
     def setupUi(self, OtherWindow):
@@ -75,7 +65,6 @@ class Ui_OtherWindow(object):
         self.label.setObjectName("label")
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_3.setGeometry(QtCore.QRect(70, 230, 291, 101))
-        self.pushButton_3.pressed.connect(self.me)
         font = QtGui.QFont()
         font.setPointSize(14)
         font.setBold(True)
@@ -94,16 +83,16 @@ class Ui_OtherWindow(object):
 "")
         self.pushButton_3.setObjectName("pushButton_3")
         OtherWindow.setCentralWidget(self.centralwidget)
-
         self.retranslateUi(OtherWindow)
         QtCore.QMetaObject.connectSlotsByName(OtherWindow)
-
     def retranslateUi(self, OtherWindow):
         _translate = QtCore.QCoreApplication.translate
         OtherWindow.setWindowTitle(_translate("OtherWindow", "Выбор"))
         self.pushButton_2.setText(_translate("OtherWindow", "Выход"))
         self.label.setText(_translate("OtherWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">GenaBooking<br/></span></p></body></html>"))
         self.pushButton_3.setText(_translate("OtherWindow", "Мои Записи"))
+
+
 
 
 if __name__ == "__main__":

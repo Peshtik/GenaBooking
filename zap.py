@@ -5,14 +5,6 @@ from PyQt5 import QtWidgets
 
 class Ui_MainWindow(object):
 
-    ab = sqlite3.connect('dates.db')
-    cursor = ab.cursor()
-
-    table = ('''CREATE TABLE  dates(
-               data TEXT
-           )''')
-    ab.commit()
-
 
 
     def setupUi(self, MainWindow):
@@ -86,19 +78,6 @@ class Ui_MainWindow(object):
 
     def insert(self, x):
         print(x)
-        # cursor.execute(table)
-        # cursor.execute(f'INSERT INTO dates VALUES ("{x}")')
-        # ab.commit()
-
-    # ab = sqlite3.connect('dates.db')
-    # cursor = ab.cursor()
-    #
-    # table = ('''CREATE TABLE IF NOT EXISTS dates(
-    #         data TEXT
-    #     )''')
-    # cursor.execute(table)
-    # cursor.execute(f'INSERT INTO dates VALUES ("{x}")')
-    # ab.commit()
 
 
 
